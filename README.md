@@ -32,6 +32,36 @@ StockVision Pro is an interactive stock analysis application built with Streamli
    ```bash
    Run the Streamlit application
 
+2. Select Ticker:
+   
+   Enter the ticker symbol of the stock you want to analyze in the sidebar text input.
+   Here some examples of the company's name and there tickers
+   
+   - Apple Inc. - AAPL
+   - Microsoft Corporation - MSFT
+   - Amazon.com Inc. - AMZN
+   - Alphabet Inc. (Class A) - GOOGL
+   - Alphabet Inc. (Class C) - GOOG
+   - Facebook, Inc. (Meta Platforms, Inc.) - META
+   - Tesla, Inc. - TSLA
+   - Berkshire Hathaway Inc. (Class A) - BRK.A
+   - Berkshire Hathaway Inc. (Class B) - BRK.B
+   - NVIDIA Corporation - NVDA
+   - Johnson & Johnson - JNJ
+   - JPMorgan Chase & Co. - JPM
+   - Visa Inc. - V
+   - Procter & Gamble Co. - PG
+   - UnitedHealth Group Incorporated - UNH
+   - Walmart Inc. - WMT
+   - Mastercard Incorporated - MA
+   - Walt Disney Company - DIS
+   - PayPal Holdings, Inc. - PYPL
+   - Netflix, Inc. - NFLX
+  
+3. Select Date Range:
+  - Choose the start date for your analysis using the start date selector.
+  - Choose the end date for your analysis using the end date selector. 
+
 
 ## Technical Indicators
   ### Simple Moving Average (SMA):
