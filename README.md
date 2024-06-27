@@ -56,13 +56,14 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 
 ## Screenshots
 
-  1. Stock Price Visualization
+  1. [Stock Price Visualization](https://github.com/soumyajitjalua1/StockVision-Pro/blob/main/Plot.png)
 
-  2. Pricing Data Analysis
+  2. [Pricing Data Analysis](https://github.com/soumyajitjalua1/StockVision-Pro/blob/main/Pricing%20Movement.png)
 
-  3. Fundamental Data
+  3. [Fundamental Data](https://github.com/soumyajitjalua1/StockVision-Pro/blob/main/Fundamental%20data.png)
 
-  4. News Updates
+  4. [News Updates](https://github.com/soumyajitjalua1/StockVision-Pro/blob/main/Top%2010%20News.png)
+  5. [Landing Page]()
 
 ## Contributing
 
@@ -70,7 +71,7 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 
 ## License
 
-  This project is licensed under the MIT License. See the LICENSE[] file for details.
+  This project is licensed under the MIT License. See the [LICENSE](https://github.com/soumyajitjalua1/StockVision-Pro/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
 
