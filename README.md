@@ -23,7 +23,8 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 
 3. Install the required packages:
    ```bash
-   Install the required packages
+   pip install -r requirements.txt
+
 
 ## Usage
 
