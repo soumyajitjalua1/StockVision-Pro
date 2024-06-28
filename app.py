@@ -14,7 +14,7 @@ st.markdown("<h1 style='text-align: center;'>StockVision Pro</h1>", unsafe_allow
 
 # Sidebar inputs for ticker and date range
 ticker = st.sidebar.text_input('Ticker', 'AAPL')
-start_date = st.sidebar.date_input('Start date', datetime(2020, 1, 1))
+start_date = st.sidebar.date_input('Start date', datetime(2022, 1, 1))
 end_date = st.sidebar.date_input('End date', datetime.now())
 
 # Ensure dates are in proper format
