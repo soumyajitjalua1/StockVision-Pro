@@ -9,13 +9,15 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 - **Fundamental Data**: Access balance sheets, income statements, and cash flow statements.
 - **News Updates**: Get the latest news for the selected stock with sentiment analysis.
 - **Data Download**: Download stock data as a CSV file.
-- **Future Features**: Placeholder for portfolio management and educational resources.
+- **Portfolio Management**: Add and track your portfolio performance.
+- **Educational Resources**: Learn about various aspects of stock market analysis (under development).
 
 ## Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/StockVisionPro.git
+
 
 2. Change to the project directory:
    ```bash
@@ -30,7 +32,8 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 
 1. Run the Streamlit application:
    ```bash
-   Run the Streamlit application
+   streamlit run app.py
+
 
 2. Select Ticker:
    
@@ -84,6 +87,17 @@ StockVision Pro is an interactive stock analysis application built with Streamli
   Access balance sheets, income statements, and cash flow statements using the Alpha Vantage API.
   ### 3. News Updates:
   Get the latest news for the selected stock with sentiment analysis provided by the StockNews API.
+  ### 4. Portfolio Management:
+  Add and track your portfolio performance.
+  ### 5. Educational Resources:
+  Learn about various aspects of stock market analysis. This section is under development and will include topics such as:
+  - Introduction to Stock Market
+  - Fundamental Analysis
+  - Technical Analysis
+  - Key Financial Ratios
+  - Moving Averages (SMA and EMA)
+  - Risk Management
+  - Portfolio Diversification
 
 ## Screenshots
 
