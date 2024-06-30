@@ -3,14 +3,13 @@ import numpy as np
 import streamlit as st
 import yfinance as yf
 import plotly.express as px
-import plotly.graph_objects as go
-from datetime import datetime
+from datetime import datetime, timedelta
+from alpha_vantage.timeseries import TimeSeries
 from alpha_vantage.fundamentaldata import FundamentalData
 from stocknews import StockNews
 
 # Set up Streamlit app
 st.markdown("<h1 style='text-align: center;'>StockVision Pro</h1>", unsafe_allow_html=True)
-
 
 # Sidebar inputs for ticker and date range
 ticker = st.sidebar.text_input('Ticker', 'AAPL')
@@ -33,7 +32,7 @@ try:
         fig = px.line(data, x=data.index, y=data['Adj Close'], title=ticker)
         fig.update_xaxes(title='Date')
         fig.update_yaxes(title='Adjusted Close Price')
-        
+
         # Adding Moving Averages
         data['SMA'] = data['Adj Close'].rolling(window=20).mean()
         data['EMA'] = data['Adj Close'].ewm(span=20, adjust=False).mean()
@@ -44,8 +43,10 @@ try:
 except Exception as e:
     st.error(f"Error fetching data: {e}")
 
-# Tabs for Pricing Data, Fundamental Data, and Top 10 News
-pricing_data, fundamental_data, news = st.tabs(["Pricing Data", "Fundamental Data", "Top 10 News"])
+# Tabs for Pricing Data, Fundamental Data, Top 10 News, Portfolio, Top 10 Stocks, and Educational Resources
+pricing_data, fundamental_data, news, portfolio, educational_resources = st.tabs([
+    "Pricing Data", "Fundamental Data", "Top 10 News", "Portfolio", "Educational Resources"
+])
 
 # Pricing Data Tab
 with pricing_data:
@@ -73,7 +74,7 @@ with fundamental_data:
         st.write(bs)
     except Exception as e:
         st.error(f"Error fetching balance sheet data: {e}")
-    
+
     st.subheader('Income Statement')
     try:
         income_statement = fd.get_income_statement_annual(ticker)[0]
@@ -82,7 +83,7 @@ with fundamental_data:
         st.write(is1)
     except Exception as e:
         st.error(f"Error fetching income statement data: {e}")
-    
+
     st.subheader('Cash Flow Statement')
     try:
         cash_flow = fd.get_cash_flow_annual(ticker)[0]
@@ -121,10 +122,48 @@ if not data.empty:
         mime='text/csv',
     )
 
-# Portfolio Management Placeholder (can be expanded)
-st.sidebar.subheader('Portfolio Management')
-st.sidebar.write("Track your portfolio performance here. (Feature under development)")
+# Portfolio Management Tab
+with portfolio:
+    st.header("Portfolio Management")
+    st.write("Track your portfolio performance here. (Feature under development)")
 
-# Educational Resources Placeholder (can be expanded)
-st.sidebar.subheader('Educational Resources')
-st.sidebar.write("Learn more about stock market analysis. (Feature under development)")
+    if 'portfolio' not in st.session_state:
+        st.session_state['portfolio'] = []
+
+    ticker_input = st.text_input("Portfolio Ticker")
+    shares_input = st.number_input("Number of Shares", min_value=0, step=1)
+    price_input = st.number_input("Purchase Price", min_value=0.0, step=0.01)
+    add_button = st.button("Add to Portfolio")
+
+    if add_button and ticker_input and shares_input > 0 and price_input > 0:
+        st.session_state['portfolio'].append({
+            'Ticker': ticker_input,
+            'Shares': shares_input,
+            'Purchase Price': price_input
+        })
+
+    # Display Portfolio
+    if st.session_state['portfolio']:
+        portfolio_df = pd.DataFrame(st.session_state['portfolio'])
+        st.write(portfolio_df)
+    else:
+        st.write("No stocks in portfolio yet.")
+
+
+# Educational Resources Tab
+with educational_resources:
+    st.header("Educational Resources")
+    st.write("""
+    Welcome to the Educational Resources section! Here, you can learn about various aspects of stock market analysis. 
+    This section is under development, and we plan to include the following topics:
+    
+    - Introduction to Stock Market
+    - Fundamental Analysis
+    - Technical Analysis
+    - Key Financial Ratios
+    - Moving Averages (SMA and EMA)
+    - Risk Management
+    - Portfolio Diversification
+    
+    Stay tuned for more updates!
+    """)
