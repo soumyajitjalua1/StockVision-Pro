@@ -5,3 +5,5 @@ pandas
 numpy
 alpha_vantage
 stocknews
+python-dotenv
+google-generativeai
