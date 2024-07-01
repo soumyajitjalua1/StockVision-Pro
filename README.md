@@ -11,6 +11,7 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 - **Data Download**: Download stock data as a CSV file.
 - **Portfolio Management**: Add and track your portfolio performance.
 - **Educational Resources**: Learn about various aspects of stock market analysis (under development).
+- **CleverQ Chatbot**: Interact with an AI chatbot to ask questions and get responses using Google's Gemini API.
 
 ## Installation
 
@@ -26,6 +27,10 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 3. Install the required packages:
    ```bash
    pip install -r requirements.txt
+
+4. Create a `.env` file and add your Google API key:
+   ```bash
+   echo "GOOGLE_API_KEY=your-google-api-key" > .env
 
 
 ## Usage
@@ -98,6 +103,11 @@ StockVision Pro is an interactive stock analysis application built with Streamli
   - Moving Averages (SMA and EMA)
   - Risk Management
   - Portfolio Diversification
+### 6. CleverQ Chatbot:
+
+- Interact with an AI chatbot using Google's Gemini API.
+- Ask questions and get intelligent responses within the app.
+- Supports multiple conversation tabs, each maintaining its own question and response history.
 
 ## Screenshots
 
@@ -129,5 +139,8 @@ StockVision Pro is an interactive stock analysis application built with Streamli
   - Plotly
   - Alpha Vantage
   - StockNews API
+``` sql
+
+In the revised `README.md`, the CleverQ feature has been added under the features section, and detailed information about its usage and functionality is provided. This update ensures that users are aware of the new CleverQ integration and can utilize it effectively.
 
 
