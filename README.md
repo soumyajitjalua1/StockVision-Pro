@@ -115,7 +115,7 @@ StockVision Pro is an interactive stock analysis application built with Streamli
   Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ## App Link 
-      https://stockvision-pro-wribbfrzqct8tjwxpcn3nn.streamlit.app/
+      https://stockvision-pro.streamlit.app/
 
 
 ## License
