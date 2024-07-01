@@ -16,7 +16,7 @@ StockVision Pro is an interactive stock analysis application built with Streamli
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/StockVisionPro.git
+   git clone https://github.com/soumyajitjalua1/StockVision-Pro.git
 
 
 2. Change to the project directory:
